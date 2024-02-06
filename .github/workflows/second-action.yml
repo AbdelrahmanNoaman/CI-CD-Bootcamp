@@ -12,3 +12,17 @@ jobs:
       - name: running tests
         working-directory: "02 Starting Project/"
         run: npm test
+
+  deploy-application:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download repository
+        uses: actions/checkout@v4
+      - name: Install needed dependencies
+        working-directory: "02 Starting Project/"
+        run: npm ci
+      - name: Build application
+        working-directory: "02 Starting Project/"
+        run: npm run build
+      - name: Deploy application
+        run: echo "Deploying ...."
