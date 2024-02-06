@@ -1,14 +1,14 @@
 name: react-action
 on: workflow_dispatch
 jobs:
-  run-application:
+  test-application:
     runs-on: ubuntu-latest
     steps:
       - name: download repository
         uses: actions/checkout@v4
       - name: install needed dependencies
-        working-directory: '02 Starting Project/'
+        working-directory: "02 Starting Project/"
         run: npm ci
       - name: running tests
-        working-directory: '02 Starting Project/'
+        working-directory: "02 Starting Project/"
         run: npm test
