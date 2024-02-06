@@ -1,0 +1,14 @@
+name: react-action
+on: workflow-dispatch
+jobs:
+  run-application:
+    runs-on: ubuntu-latest
+    steps:
+      - name: go to react folder
+        run: cd '.\02 Starting Project\'
+      - name: Install dependencies
+        run: npm install
+      - name: run tests
+        run: npm test
+      - name: run the server
+        run: npm run dev
