@@ -10,7 +10,7 @@ jobs:
         run: |
           ls
           cd '02 Starting Project/'
-          echo:"ana dkhlt gwa"
+          echo "ana dkhlt gwa"
           ls
       - name: install needed dependencies
         run: npm install
