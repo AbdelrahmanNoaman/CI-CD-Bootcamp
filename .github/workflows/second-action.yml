@@ -9,6 +9,8 @@ jobs:
       - name: go to react project folder
         run: cd '02 Starting Project/'
       - name: install needed dependencies
+        working-directory: '02 Starting Project/'
         run: npm ci
       - name: run the application
+        working-directory: '02 Starting Project/'
         run: npm run dev
