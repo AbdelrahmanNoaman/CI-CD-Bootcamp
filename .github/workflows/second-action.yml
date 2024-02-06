@@ -5,9 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: go to react folder
-        run: cd '02 Starting Project/'
+        run: |
+          echo "Abl m n5ush l folder"
+          cd '02 Starting Project/'
+          echo "d5lna l folder"
       - name: Install dependencies
-        run: npm install
+        run: |
+          echo "Abl m n install l dependencies"
+          npm install
+          echo "b3d m n install l dependencies"
       - name: run tests
         run: npm test
       - name: run the server
