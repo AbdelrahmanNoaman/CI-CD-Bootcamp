@@ -7,7 +7,10 @@ jobs:
       - name: download repository
         uses: actions/checkout@v4
       - name: go to react project folder
-        run: cd '02 Starting Project/'
+        run: |
+          ls
+          cd '02 Starting Project/'
+          ls
       - name: install needed dependencies
         run: npm install
       - name: run the application
