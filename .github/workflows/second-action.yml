@@ -15,6 +15,6 @@ jobs:
       - name: install needed dependencies
         run:  |
         ls    
-        npm install
+        npm ci
       - name: run the application
         run: npm run dev
