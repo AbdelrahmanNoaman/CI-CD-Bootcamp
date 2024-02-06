@@ -12,7 +12,9 @@ jobs:
       - name: running tests
         working-directory: "02 Starting Project/"
         run: npm test
+
   deploy-application:
+    needs: test-application
     runs-on: ubuntu-latest
     steps:
       - name: download repository
