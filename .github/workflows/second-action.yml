@@ -4,17 +4,11 @@ jobs:
   run-application:
     runs-on: ubuntu-latest
     steps:
-      - name: go to react folder
-        run: |
-          echo "Abl m n5ush l folder"
-          cd $GITHUB_WORKSPACE/02\ Starting\ Project
-          echo "d5lna l folder"
-      - name: Install dependencies
-        run: |
-          echo "Abl m n install l dependencies"
-          npm install
-          echo "b3d m n install l dependencies"
-      - name: run tests
-        run: npm test
-      - name: run the server
+      - name: download repository
+        uses: actions/checkout@v4
+      - name: go to react project folder
+        run: cd '02 Starting Project/'
+      - name: install needed dependencies
+        run: npm install
+      - name: run the application
         run: npm run dev
