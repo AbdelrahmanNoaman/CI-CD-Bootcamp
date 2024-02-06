@@ -6,11 +6,8 @@ jobs:
     steps:
       - name: download repository
         uses: actions/checkout@v4
-      - name: go to react project folder
-        run: cd '02 Starting Project/'
       - name: install needed dependencies
         run: |
-          ls    
+          cd '02 Starting Project/'   
           npm ci
-      - name: run the application
-        run: npm run dev
+          npm test
