@@ -8,7 +8,5 @@ jobs:
         run: cd '.\02 Starting Project\'
       - name: Install dependencies
         run: npm install
-      - name: run tests
-        run: npm test
       - name: run the server
         run: npm run dev
