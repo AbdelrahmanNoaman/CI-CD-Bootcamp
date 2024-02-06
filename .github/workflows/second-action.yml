@@ -1,5 +1,5 @@
 name: react-action
-on: workflow_dispatch
+on: push
 jobs:
   run-application:
     runs-on: ubuntu-latest
