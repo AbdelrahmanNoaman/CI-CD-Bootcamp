@@ -13,6 +13,8 @@ jobs:
           echo "ana dkhlt gwa"
           ls
       - name: install needed dependencies
-        run: npm install
+        run:  |
+        ls    
+        npm install
       - name: run the application
         run: npm run dev
