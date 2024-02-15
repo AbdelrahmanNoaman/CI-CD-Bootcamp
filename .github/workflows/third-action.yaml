@@ -1,8 +1,8 @@
 name: Assignment 1 workflow
-on: [workflow_dispatch, push]
+on: [workflow-dispatch, push]
 jobs:
   run lint:
-    runs_on: ubuntu_latest
+    runs-on: ubuntu_latest
     steps:
       - name: download repository
         uses: actions/checkout@v4
@@ -13,7 +13,7 @@ jobs:
         run: echo "Run Linting"
 
   run tests:
-    runs_on: ubuntu_latest
+    runs-on: ubuntu_latest
     needs: run lint
     steps:
       - name: download repository
@@ -25,7 +25,7 @@ jobs:
         run: npm run test
 
   deploy the application:
-    runs_on: ubuntu_latest
+    runs-on: ubuntu_latest
     needs: run tests
     steps:
       - name: download repository
