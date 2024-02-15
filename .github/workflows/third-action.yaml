@@ -1,5 +1,5 @@
 name: Assignment 1 workflow
-on: [workflow-dispatch, push]
+on: [workflow_dispatch, push]
 jobs:
   run lint:
     runs-on: ubuntu_latest
