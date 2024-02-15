@@ -1,0 +1,39 @@
+name: Assignment 1 workflow
+on: [workflow_dispatch, push]
+jobs:
+  run lint:
+    runs_on: ubuntu_latest
+    steps:
+      - name: download repository
+        uses: actions/checkout@v4
+      - name: install dependencies
+        working-directory: "02 Starting Project/"
+        run: npm ci
+      - name: mimic Linting
+        run: echo "Run Linting"
+
+  run tests:
+    runs_on: ubuntu_latest
+    needs: run lint
+    steps:
+      - name: download repository
+        uses: actions/checkout@v4
+      - name: install dependencies
+        working-directory: "02 Starting Project/"
+        run: npm ci
+      - name: testing the application
+        run: npm run test
+
+  deploy the application:
+    runs_on: ubuntu_latest
+    needs: run tests
+    steps:
+      - name: download repository
+        uses: actions/checkout@v4
+      - name: install dependencies
+        working-directory: "02 Starting Project/"
+        run: npm ci
+      - name: build the application
+        run: npm run build
+      - name: Deploy application
+        run: echo "Deploy application"
