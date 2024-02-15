@@ -22,6 +22,7 @@ jobs:
         working-directory: "02 Starting Project/"
         run: npm ci
       - name: testing the application
+        working-directory: "02 Starting Project/"
         run: npm run test
 
   deploy-the-application:
@@ -34,6 +35,7 @@ jobs:
         working-directory: "02 Starting Project/"
         run: npm ci
       - name: build the application
+        working-directory: "02 Starting Project/"
         run: npm run build
-      - name: Deploy application
+      - name: Deploy applications
         run: echo "Deploy application"
